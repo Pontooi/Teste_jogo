@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DualDev — Academia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<nav id="nav">
+  <span class="brand"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h5v17H6a2 2 0 0 1-2-2Z"/><path d="M11 4h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7"/></svg> DualDev</span>
+  <a data-route="/">Início</a>
+  <a data-route="/academia">Academia</a>
+  <a data-route="/conquistas">Conquistas</a>
+  <a data-route="/sobre">Sobre</a>
+  <span class="spacer"></span>
+  <button class="ghost" id="themeBtn" aria-label="Alternar tema">🌓 Tema</button>
+</nav>
+<main id="app"></main>
+<div class="toast-wrap" id="toastWrap"></div>
+<footer>DualDev — campus da turma de Desenvolvimento de Sistemas.</footer>
+
+<!-- Ordem importa: estado → dados → recursos → páginas → roteador → main -->
+<script src="js/core/state.js"></script>
+<script src="js/data/achievements.js"></script>
+<script src="js/data/tracks.js"></script>
+<script src="js/data/lessons/index.js"></script>
+<script src="js/data/resources.js"></script>
+<script src="js/data/missions.js"></script>
+<script src="js/data/lessons/html.js"></script>
+<script src="js/data/lessons/css.js"></script>
+<script src="js/data/lessons/js.js"></script>
+<script src="js/data/lessons/python.js"></script>
+<script src="js/data/lessons/java.js"></script>
+<script src="js/features/progress.js"></script>
+<script src="js/features/transpilers.js"></script>
+<script src="js/features/playground.js"></script>
+<script src="js/pages/home.js"></script>
+<script src="js/pages/academia.js"></script>
+<script src="js/pages/conquistas.js"></script>
+<script src="js/pages/sobre.js"></script>
+<script src="js/core/router.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

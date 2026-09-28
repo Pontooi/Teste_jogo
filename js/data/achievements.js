@@ -1,0 +1,20 @@
+// ============== CONQUISTAS ==============
+const ACHIEVEMENTS = [
+  {id:'first-step',    icon:'★',  label:'Primeiro passo',      desc:'Conclua sua primeira lição',      rarity:'comum',   cat:'Progresso'},
+  {id:'ten-lessons',   icon:'🔟', label:'Dedicação',           desc:'Conclua 10 lições',                rarity:'comum',   cat:'Progresso', goal:10,  progress:()=>STATE.completed.length},
+  {id:'twenty-lessons',icon:'📚', label:'Estudioso',           desc:'Conclua 20 lições',                rarity:'raro',    cat:'Progresso', goal:20,  progress:()=>STATE.completed.length},
+  {id:'all-lessons',   icon:'🎓', label:'Mestre Supremo',      desc:'Conclua todas as lições da Academia', rarity:'lendário',cat:'Progresso', goal:()=>totalNodes(), progress:()=>STATE.completed.length},
+  {id:'html-master',   icon:'📖', label:'Mestre do HTML',      desc:'Complete todas as lições de HTML', rarity:'raro', cat:'Domínio'},
+  {id:'css-master',    icon:'🎨', label:'Estilista',           desc:'Complete todas as lições de CSS',  rarity:'raro', cat:'Domínio'},
+  {id:'js-master',     icon:'⚡', label:'Feiticeiro JS',       desc:'Complete todas as lições de JS',   rarity:'raro', cat:'Domínio'},
+  {id:'py-master',     icon:'🐍', label:'Encantador de Python',desc:'Complete todas as lições de Python',rarity:'raro',cat:'Domínio'},
+  {id:'java-master',   icon:'☕', label:'Cavaleiro Java',      desc:'Complete todas as lições de Java', rarity:'raro', cat:'Domínio'},
+  {id:'polyglot',      icon:'🌐', label:'Poliglota',           desc:'Conclua lições em 3 linguagens',   rarity:'épico', cat:'Domínio'},
+  {id:'polyglot-5',    icon:'🌍', label:'Pentaglota',          desc:'Conclua lições em todas as 5 linguagens', rarity:'lendário', cat:'Domínio'},
+  {id:'xp-100',        icon:'🏅', label:'Veterano',            desc:'Acumule 100 XP',  rarity:'comum',  cat:'Experiência', goal:100,  progress:()=>STATE.xp||0},
+  {id:'xp-500',        icon:'🥈', label:'Elite',               desc:'Acumule 500 XP',  rarity:'raro',   cat:'Experiência', goal:500,  progress:()=>STATE.xp||0},
+  {id:'xp-1000',       icon:'🥇', label:'Lenda',               desc:'Acumule 1000 XP', rarity:'épico',  cat:'Experiência', goal:1000, progress:()=>STATE.xp||0},
+  {id:'daily-streak',  icon:'🔥', label:'Chama Acesa',         desc:'Volte e estude em outro dia',   rarity:'comum', cat:'Dedicação'},
+  {id:'hands-on',      icon:'🛠️', label:'Mão na massa',        desc:'Cumpra 3 missões de código',    rarity:'raro',  cat:'Dedicação', goal:3, progress:()=>(STATE.missions||[]).length},
+  {id:'perfect-quiz',  icon:'💯', label:'Gabaritou',           desc:'Acerte todas as perguntas de um quiz', rarity:'raro', cat:'Dedicação'},
+];
